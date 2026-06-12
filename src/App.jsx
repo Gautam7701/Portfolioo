@@ -1593,7 +1593,7 @@ function ProjectCard({ project, delay, visible }) {
           )}
         </div>
         {/* Apply gradient via inline class workaround */}
-        <div style={{
+        {/* <div style={{
           position: "absolute", inset: 0,
           background: `linear-gradient(135deg, ${project.gradient === "from-violet-600 to-indigo-600" ? "#7C3AED, #4F46E5" :
               project.gradient === "from-cyan-500 to-blue-600" ? "#06B6D4, #2563EB" :
@@ -1603,7 +1603,7 @@ function ProjectCard({ project, delay, visible }) {
                       "#8B5CF6, #7C3AED"
             })`,
           opacity: 0.85,
-        }} />
+        }} /> */}
         <div style={{
           position: "absolute", inset: 0,
           backgroundImage: "radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 60%)",
