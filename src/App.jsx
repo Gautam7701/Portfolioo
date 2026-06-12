@@ -1474,7 +1474,7 @@ function Projects() {
     <section id="projects" style={{ padding: "120px 2rem", background: "rgba(241,245,249,0.01)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }} ref={ref}>
         <div style={{
-          opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(30px)",
+          opacity:  1 , transform: "translateY(0)" ,
           transition: "all 0.7s cubic-bezier(.23,1,.32,1)",
           marginBottom: "4rem",
         }}>
@@ -1531,8 +1531,9 @@ function ProjectCard({ project, delay, visible }) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(40px)",
+          position:"relative",
+          opacity:  1,
+          transform: "translateY(0)",
           transition: `all 0.7s cubic-bezier(.23,1,.32,1) ${delay}ms`,
           borderRadius: 16,
           border: "1px solid",
@@ -1540,7 +1541,7 @@ function ProjectCard({ project, delay, visible }) {
           background: hovered ? "rgba(79,70,229,0.06)" : "rgba(241,245,249,0.02)",
           overflow: "hidden",
           cursor: "default",
-          transition2: "border-color 0.3s, background 0.3s",
+          transition: "border-color 0.3s, background 0.3s",
         }}
       >
         {/* Image / gradient header */}
@@ -1558,9 +1559,10 @@ function ProjectCard({ project, delay, visible }) {
             alt={project.title}
             style={{
               width: "100%",
-              height: "100%",
+              height: "180px",
               objectFit: "cover",
               display: "block",
+              background:"red"
             }}
           />
 
@@ -1592,31 +1594,7 @@ function ProjectCard({ project, delay, visible }) {
             </div>
           )}
         </div>
-        {/* Apply gradient via inline class workaround */}
-        {/* <div style={{
-          position: "absolute", inset: 0,
-          background: `linear-gradient(135deg, ${project.gradient === "from-violet-600 to-indigo-600" ? "#7C3AED, #4F46E5" :
-              project.gradient === "from-cyan-500 to-blue-600" ? "#06B6D4, #2563EB" :
-                project.gradient === "from-emerald-500 to-teal-600" ? "#10B981, #0D9488" :
-                  project.gradient === "from-pink-500 to-rose-600" ? "#EC4899, #E11D48" :
-                    project.gradient === "from-amber-500 to-orange-600" ? "#F59E0B, #EA580C" :
-                      "#8B5CF6, #7C3AED"
-            })`,
-          opacity: 0.85,
-        }} /> */}
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "radial-gradient(circle at 30% 50%, rgba(255,255,255,0.08) 0%, transparent 60%)",
-        }} />
-        {/* Grid pattern overlay */}
-        <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.1 }}>
-          <defs>
-            <pattern id={`grid-${project.id}`} width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill={`url(#grid-${project.id})`} />
-        </svg>
+      
         {project.featured && (
           <div style={{
             position: "absolute", top: 12, right: 12,
