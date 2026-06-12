@@ -9,7 +9,7 @@ import moviemate from "../src/assets/assets/Project7.png"
 import hyrstack from "../src/assets/assets/hyrstack.png"
 import connectree from "../src/assets/assets/connectree.png"
 import vera from "../src/assets/assets/vera.png"
-import afc from "../src/assets/assets/afc.PNG"
+import afc from "../src/assets/assets/afc.png"
 
 // ─────────────────────────────────────────────
 //  ★  ALL PERSONAL DATA LIVES HERE — edit this
