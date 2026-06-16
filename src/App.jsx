@@ -20,7 +20,7 @@ const DATA = {
   tagline: "Crafting interactive digital experiences that live at the intersection of design and code.",
   location: "Delhi NCR, India",
   email: "gautamgupta2606@gmail.com.com",
-  resumeUrl: "/Gautam__Resume.pdf",
+  resumeUrl: "/Gautam_Resume.pdf",
   socials: {
     github: "https://github.com/Gautam7701",
     linkedin: "https://www.linkedin.com/in/gautamgupta13/",
@@ -255,6 +255,13 @@ const DATA = {
     },
   ],
   experience: [
+     {
+      year: "2026",
+      title: "Frontend Developer Intern",
+      org: "ONNOFF",
+      type: "work",
+      desc: "Built and optimized high-performance brand websites focused on premium UI, animations, and responsiveness. Implemented smooth motion interactions using React.js and Next.js to deliver cinematic, storytelling-driven web experiences.",
+    },
     {
       year: "2025",
       title: "Freelance Frontend Developer",
@@ -272,7 +279,7 @@ const DATA = {
     {
       year: "2024",
       title: "Frontend Developer Intern",
-      org: "Web Developer Internship",
+      org: "Vera",
       type: "work",
       desc: "Developed responsive user interfaces, reusable components, and optimized frontend experiences while working with modern web development practices.",
     },
